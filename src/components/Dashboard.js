@@ -43,14 +43,14 @@ const Dashboard = () => {
 
   useEffect(() => {
     setFilteredEquipments(equipments); // Initialize filteredEquipments with all equipment data
-  }, []);
+  }, [equipments]);
 
   useEffect(() => {
     const results = equipments.filter(equipment =>
       equipment.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setFilteredEquipments(results);
-  }, [searchQuery]);
+  }, [searchQuery, equipments]);
 
   const addToCart = (equipment) => {
     setCart((prevCart) => {

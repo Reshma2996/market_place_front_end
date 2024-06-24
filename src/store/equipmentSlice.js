@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchEquipments, createEquipment, updateEquipment, deleteEquipment } from '../api';
+import { fetchEquipments } from '../api';
 
 export const getEquipments = createAsyncThunk('equipment/getEquipments', fetchEquipments);
 
