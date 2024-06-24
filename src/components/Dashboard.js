@@ -3,6 +3,36 @@ import './Dashboard.css';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
+const equipments = [
+  {
+    _id: '1',
+    name: 'Washing Machine',
+    description: 'Samsung - Front Load',
+    specification: '3 Ton , white colour',
+    rentalRate: 10000,
+    availabilityStartDate: '2024-06-04T00:00:00.000+00:00',
+    availabilityEndDate: '2024-06-30T00:00:00.000+00:00',
+  },
+  {
+    _id: '2',
+    name: 'Refrigerator',
+    description: 'LG - Double Door',
+    specification: '250 L, silver colour',
+    rentalRate: 8000,
+    availabilityStartDate: '2024-06-04T00:00:00.000+00:00',
+    availabilityEndDate: '2024-06-30T00:00:00.000+00:00',
+  },
+  {
+    _id: '3',
+    name: 'Microwave Oven',
+    description: 'Panasonic - Convection',
+    specification: '32 L, black colour',
+    rentalRate: 5000,
+    availabilityStartDate: '2024-06-04T00:00:00.000+00:00',
+    availabilityEndDate: '2024-06-30T00:00:00.000+00:00',
+  },
+];
+
 const Dashboard = () => {
   const { username } = useContext(AuthContext);
   const [searchQuery, setSearchQuery] = useState('');
@@ -10,47 +40,16 @@ const Dashboard = () => {
   const [cart, setCart] = useState([]);
   const navigate = useNavigate();
 
-  // Hardcoded equipment data
-  const equipments = [
-    {
-      _id: '1',
-      name: 'Washing Machine',
-      description: 'Samsung - Front Load',
-      specification: '3 Ton , white colour',
-      rentalRate: 10000,
-      availabilityStartDate: '2024-06-04T00:00:00.000+00:00',
-      availabilityEndDate: '2024-06-30T00:00:00.000+00:00',
-    },
-    {
-      _id: '2',
-      name: 'Refrigerator',
-      description: 'LG - Double Door',
-      specification: '250 L, silver colour',
-      rentalRate: 8000,
-      availabilityStartDate: '2024-06-04T00:00:00.000+00:00',
-      availabilityEndDate: '2024-06-30T00:00:00.000+00:00',
-    },
-    {
-      _id: '3',
-      name: 'Microwave Oven',
-      description: 'Panasonic - Convection',
-      specification: '32 L, black colour',
-      rentalRate: 5000,
-      availabilityStartDate: '2024-06-04T00:00:00.000+00:00',
-      availabilityEndDate: '2024-06-30T00:00:00.000+00:00',
-    },
-  ];
-
   useEffect(() => {
     setFilteredEquipments(equipments); // Initialize filteredEquipments with all equipment data
-  }, [equipments]);
+  }, []);
 
   useEffect(() => {
     const results = equipments.filter(equipment =>
       equipment.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setFilteredEquipments(results);
-  }, [searchQuery, equipments]);
+  }, [searchQuery]);
 
   const addToCart = (equipment) => {
     setCart((prevCart) => {
