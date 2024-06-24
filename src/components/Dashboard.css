@@ -1,0 +1,49 @@
+/* src/components/Dashboard.css */
+.dashboard-page {
+    padding: 20px;
+  }
+  
+  .welcome-message {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .search-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .search-section input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .equipment-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .equipment-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .equipment-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .equipment-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .equipment-list p {
+    color: #ff0000;
+  }
+  

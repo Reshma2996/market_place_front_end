@@ -1,0 +1,27 @@
+/* Reset some default margins and paddings */
+body, h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use a consistent font family across the app */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Some basic utility classes */
+.mt-3 {
+  margin-top: 1rem;
+}

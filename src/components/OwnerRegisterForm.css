@@ -1,0 +1,74 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.owner-register-form {
+    max-width: 400px;
+    margin: 2rem auto; /* Added margin for spacing from top */
+    background-color: #ffffff;
+    padding: 2rem; /* Increased padding for better spacing */
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.owner-register-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+    font-weight: 700;
+}
+
+.owner-register-form .form-group {
+    margin-bottom: 1.5rem; /* Increased margin for better spacing */
+}
+
+.owner-register-form .form-group label {
+    display: block;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.owner-register-form .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem; /* Increased border-radius for smoother look */
+    font-size: 1rem;
+    color: #495057;
+}
+
+.owner-register-form .form-group input:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+.owner-register-form .btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #28a745; /* Different color for register button */
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.owner-register-form .btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.owner-register-form .btn:active {
+    transform: translateY(0); /* Reset lift effect on click */
+}
+
+@media (max-width: 768px) {
+    .owner-register-form {
+        width: 90%;
+        padding: 1.5rem; /* Adjusted padding for smaller screens */
+    }
+}

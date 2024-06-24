@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0033cc; /* Blue background color */
+    padding: 10px;
+    color: white;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    font-size: 18px; /* Set the same font size for both Home and Account */
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif; /* Set the same font family for both Home and Account */
+    margin-right: 20px;
+}
+
+.navbar-brand {
+    margin-right: 20px;
+}
+
+.account-dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-toggle .icon {
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown-menu .dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu .dropdown-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dropdown-menu .dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu .dropdown-link {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu .dropdown-link:hover {
+    background-color: #f0f0f0;
+}
+
+.account-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.icon {
+    font-size: 18px;
+}
